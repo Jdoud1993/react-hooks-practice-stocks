@@ -1,12 +1,19 @@
 import React from "react";
 
-function Stock() {
+function Stock({item, onStockBuy, onStockSell}) {
+
+  function handleClickCard () {
+    if(onStockBuy) {
+      onStockBuy(item)
+    } else onStockSell(item)
+  }
+
   return (
     <div>
-      <div className="card">
+      <div className="card" onClick={handleClickCard}>
         <div className="card-body">
-          <h5 className="card-title">{"Compant Name"}</h5>
-          <p className="card-text">{"Stock Price"}</p>
+          <h5 className="card-title">{item.name}</h5>
+          <p className="card-text">{item.price}</p>
         </div>
       </div>
     </div>

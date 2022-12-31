@@ -12,3 +12,12 @@ function App() {
 }
 
 export default App;
+
+
+//App
+//   Header
+//   MainContainer
+//                PortfolioContainer
+//                StockContainer
+//                              Stock
+//                SearchBar
